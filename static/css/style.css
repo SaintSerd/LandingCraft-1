@@ -814,10 +814,36 @@ section {
 }
 
 .payment-logo {
-    height: 32px;
-    width: auto;
-    opacity: 0.7;
+    background: #F5F5F5;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    opacity: 0.8;
     transition: opacity 0.3s ease;
+}
+
+.payment-logo.visa {
+    background: #1A1F71;
+    color: white;
+}
+
+.payment-logo.mastercard {
+    background: #EB001B;
+    color: white;
+}
+
+.payment-logo.paypal {
+    background: #003087;
+    color: white;
+}
+
+.payment-logo.secure {
+    background: #28A745;
+    color: white;
+    font-size: 16px;
 }
 
 .payment-logo:hover {
