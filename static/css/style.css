@@ -463,11 +463,25 @@ section {
     padding: 5rem 0;
 }
 
-.video-container {
+.video-carousel {
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.video-slide {
+    display: none;
+    width: 100%;
+}
+
+.video-slide.active {
+    display: block;
 }
 
 .video-wrapper {
@@ -488,6 +502,53 @@ section {
     height: 100%;
     border: 0;
     border-radius: 15px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 15px 15px;
+}
+
+.carousel-btn {
+    background: #4A90E2;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #357ABD;
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #DDD;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4A90E2;
+    transform: scale(1.2);
 }
 
 /* Process Section */

@@ -54,19 +54,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Video controls functionality
-document.querySelectorAll('.control-dot').forEach((dot, index) => {
-    dot.addEventListener('click', function() {
-        // Remove active class from all dots
-        document.querySelectorAll('.control-dot').forEach(d => d.classList.remove('active'));
-        
-        // Add active class to clicked dot
-        this.classList.add('active');
-        
-        // Here you would typically change the video/image content
-        console.log(`Switched to content ${index + 1}`);
-    });
-});
+// Video carousel functionality
+let slideIndex = 1;
+
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.video-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Remove active class from all dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Show current slide and activate corresponding dot
+    if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add('active');
+    }
+    if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add('active');
+    }
+}
 
 // Form validation and enhancement
 document.addEventListener('DOMContentLoaded', function() {

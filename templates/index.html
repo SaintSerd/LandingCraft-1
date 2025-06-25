@@ -153,15 +153,44 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="video-container">
-                        <div class="video-wrapper">
-                            <iframe 
-                                src="https://www.youtube.com/embed/V2-xbB9BExQ" 
-                                title="Храм Гроба Господня - Иерусалим" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
+                    <div class="video-carousel">
+                        <div class="carousel-container">
+                            <div class="video-slide active">
+                                <div class="video-wrapper">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/Z01UQCDv_yc" 
+                                        title="Храм Гроба Господня - Короткое видео 1" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            
+                            <div class="video-slide">
+                                <div class="video-wrapper">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/Z822fDq0teA" 
+                                        title="Храм Гроба Господня - Короткое видео 2" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                            </div>
+                            <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
