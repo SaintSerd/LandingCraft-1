@@ -441,6 +441,20 @@ section {
 }
 
 .result-card h4 {
+    color: #FFFFFF !important;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.result-card p {
+    color: #FFFFFF !important;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.result-card h4 {
     font-size: 1.2rem;
     color: #000000;
     margin-bottom: 1rem;
