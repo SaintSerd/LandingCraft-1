@@ -801,17 +801,7 @@ section {
 
 
 
-/* Footer */
-.footer {
-    background: var(--white);
-    color: var(--text-dark);
-}
 
-.footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
 
 /* Animations */
 @keyframes fadeInUp {
