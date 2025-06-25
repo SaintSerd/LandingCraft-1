@@ -110,6 +110,7 @@ This is a Flask-based wellness landing page focused on spiritual services relate
 ```
 Changelog:
 - June 25, 2025. Initial setup
+- June 25, 2025. Added email notification system for contact form submissions
 ```
 
 ## User Preferences
