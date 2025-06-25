@@ -732,6 +732,21 @@ section {
     border-top: 1px solid #E9ECEF;
     padding-top: 1rem;
     margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #E9ECEF;
 }
 
 .author-info h5 {
