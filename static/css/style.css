@@ -279,19 +279,30 @@ section {
     position: relative;
 }
 
-
+.benefits-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
 .benefit-card {
     background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    height: 100%;
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
 }
 
 .benefit-card::before {
@@ -758,6 +769,16 @@ section {
         font-size: 1rem;
     }
     
+    .benefits-row {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .benefit-card {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 250px;
+    }
+    
     .process-row {
         flex-direction: column;
         gap: 1rem;
@@ -798,7 +819,19 @@ section {
         color: #333333 !important;
     }
     
-    .benefit-card,
+    .benefits-row {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .benefit-card {
+        flex: none;
+        min-width: auto;
+        max-width: none;
+        padding: 2rem 1rem;
+    }
+    
     .result-card,
     .contact-card {
         padding: 2rem 1rem;
