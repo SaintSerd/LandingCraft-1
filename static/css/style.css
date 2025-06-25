@@ -256,7 +256,7 @@ section {
     font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: #000000;
     position: relative;
 }
 
@@ -323,7 +323,7 @@ section {
 
 .benefit-card h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: #000000;
     margin-bottom: 1rem;
     position: relative;
     z-index: 2;
@@ -378,7 +378,7 @@ section {
 
 .result-card h4 {
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: #000000;
     margin-bottom: 1rem;
     position: relative;
     z-index: 2;
@@ -499,7 +499,7 @@ section {
 
 .step-content h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
