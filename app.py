@@ -12,20 +12,13 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "wellness-landing-secret-key")
 
 class ContactForm(FlaskForm):
-    name = StringField('Имя', validators=[
-        DataRequired(message='Пожалуйста, введите ваше имя'),
-        Length(min=2, max=50, message='Имя должно содержать от 2 до 50 символов')
-    ])
-    email = StringField('Email', validators=[
-        DataRequired(message='Пожалуйста, введите ваш email'),
-        Email(message='Пожалуйста, введите корректный email адрес')
-    ])
-    phone = StringField('Телефон', validators=[
+    phone = StringField('Номер телефона', validators=[
         DataRequired(message='Пожалуйста, введите ваш телефон'),
         Length(min=10, max=20, message='Телефон должен содержать от 10 до 20 символов')
     ])
-    message = TextAreaField('Сообщение', validators=[
-        Length(max=500, message='Сообщение не должно превышать 500 символов')
+    names = StringField('5 имён через запятую', validators=[
+        DataRequired(message='Пожалуйста, введите 5 имён через запятую'),
+        Length(min=5, max=200, message='Введите от 5 до 200 символов')
     ])
 
 @app.route('/', methods=['GET', 'POST'])

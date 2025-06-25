@@ -281,59 +281,28 @@
                         <form method="POST" class="contact-form">
                             {{ form.hidden_tag() }}
                             
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        {{ form.name(class="form-control", placeholder="Ваше имя") }}
-                                        {{ form.name.label(class="form-label") }}
-                                        {% if form.name.errors %}
-                                            <div class="invalid-feedback d-block">
-                                                {% for error in form.name.errors %}
-                                                    {{ error }}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
+                            <div class="form-group mb-3">
+                                {{ form.phone.label(class="form-label") }}
+                                {{ form.phone(class="form-control", placeholder="Введите ваш номер телефона") }}
+                                {% if form.phone.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {% for error in form.phone.errors %}
+                                            {{ error }}
+                                        {% endfor %}
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        {{ form.email(class="form-control", placeholder="Ваш email") }}
-                                        {{ form.email.label(class="form-label") }}
-                                        {% if form.email.errors %}
-                                            <div class="invalid-feedback d-block">
-                                                {% for error in form.email.errors %}
-                                                    {{ error }}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
+                                {% endif %}
+                            </div>
+                            
+                            <div class="form-group mb-4">
+                                {{ form.names.label(class="form-label") }}
+                                {{ form.names(class="form-control", placeholder="Например: Иван, Мария, Петр, Анна, Николай") }}
+                                {% if form.names.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {% for error in form.names.errors %}
+                                            {{ error }}
+                                        {% endfor %}
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        {{ form.phone(class="form-control", placeholder="Ваш телефон") }}
-                                        {{ form.phone.label(class="form-label") }}
-                                        {% if form.phone.errors %}
-                                            <div class="invalid-feedback d-block">
-                                                {% for error in form.phone.errors %}
-                                                    {{ error }}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        {{ form.message(class="form-control", style="height: 120px", placeholder="Имена для молебна (до 5 имён)") }}
-                                        {{ form.message.label(class="form-label") }}
-                                        {% if form.message.errors %}
-                                            <div class="invalid-feedback d-block">
-                                                {% for error in form.message.errors %}
-                                                    {{ error }}
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                </div>
+                                {% endif %}
                             </div>
                             
                             <div class="text-center mt-4">
