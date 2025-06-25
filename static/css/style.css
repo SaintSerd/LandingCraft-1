@@ -196,6 +196,16 @@ section {
     position: relative;
 }
 
+/* Force white background for all sections after hero */
+.benefits-section,
+.results-section,
+.atmosphere-section,
+.process-section,
+.contact-section {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+}
+
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
@@ -216,7 +226,8 @@ section {
 
 /* Benefits Section */
 .benefits-section {
-    background: var(--white);
+    background: var(--white) !important;
+    background-color: #FFFFFF !important;
     position: relative;
 }
 
