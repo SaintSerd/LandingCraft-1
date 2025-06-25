@@ -216,7 +216,7 @@ section {
 
 /* Benefits Section */
 .benefits-section {
-    background: var(--background-light);
+    background: var(--white);
     position: relative;
 }
 
@@ -337,7 +337,7 @@ section {
 }
 
 .result-card p {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 0.95rem;
     position: relative;
     z-index: 2;
@@ -345,7 +345,7 @@ section {
 
 /* Atmosphere Section */
 .atmosphere-section {
-    background: var(--background-light);
+    background: var(--white);
     padding: 5rem 0;
 }
 
@@ -467,13 +467,13 @@ section {
 }
 
 .pricing-note {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 0.9rem;
 }
 
 /* Contact Section */
 .contact-section {
-    background: var(--background-light);
+    background: var(--white);
     padding: 5rem 0;
 }
 
@@ -492,7 +492,7 @@ section {
 
 .contact-subtitle {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 2rem;
 }
 
@@ -514,14 +514,14 @@ section {
 }
 
 .form-label {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-weight: 500;
 }
 
 /* Footer */
 .footer {
-    background: var(--text-dark);
-    color: var(--white);
+    background: var(--white);
+    color: var(--text-dark);
 }
 
 .footer-brand {
