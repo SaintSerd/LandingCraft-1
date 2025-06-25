@@ -369,7 +369,7 @@ section {
 }
 
 .result-card {
-    background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%) !important;
     border-radius: 20px;
     padding: 2.5rem 2rem;
     text-align: center;
@@ -393,6 +393,7 @@ section {
     background: var(--gradient-primary);
     opacity: 0;
     transition: var(--transition);
+    display: none !important;
 }
 
 .result-card:hover {
@@ -441,7 +442,7 @@ section {
 }
 
 .result-card h4 {
-    color: #FFFFFF !important;
+    color: #000000 !important;
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1.3rem;
@@ -449,7 +450,7 @@ section {
 }
 
 .result-card p {
-    color: #FFFFFF !important;
+    color: #666666 !important;
     line-height: 1.6;
     margin: 0;
 }
