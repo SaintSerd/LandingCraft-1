@@ -664,7 +664,7 @@ section {
 
 .contact-form .form-control {
     background: #FFFFFF;
-    border: 2px solid #e9ecef;
+    border: 2px solid #FFD700;
     border-radius: var(--border-radius);
     padding: 1rem;
     font-size: 1rem;
@@ -674,9 +674,9 @@ section {
 
 .contact-form .form-control:focus {
     background: #FFFFFF;
-    border-color: var(--primary-color);
+    border-color: #FFA500;
     color: #000000;
-    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+    box-shadow: 0 0 0 0.3rem rgba(255, 215, 0, 0.4);
 }
 
 .contact-form .form-control::placeholder {

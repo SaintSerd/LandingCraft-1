@@ -283,7 +283,7 @@
                             
                             <div class="form-group mb-3">
                                 {{ form.phone.label(class="form-label", style="color: #000000 !important;") }}
-                                {{ form.phone(class="form-control", placeholder="Введите ваш номер телефона", style="background: #FFFFFF !important; color: #000000 !important;") }}
+                                {{ form.phone(class="form-control", placeholder="Введите ваш номер телефона", style="background: #FFFFFF !important; color: #000000 !important; border: 2px solid #FFD700 !important;") }}
                                 {% if form.phone.errors %}
                                     <div class="text-danger small mt-1">
                                         {% for error in form.phone.errors %}
@@ -295,7 +295,7 @@
                             
                             <div class="form-group mb-4">
                                 {{ form.names.label(class="form-label", style="color: #000000 !important;") }}
-                                {{ form.names(class="form-control", placeholder="Например: Иван, Мария, Петр, Анна, Николай", style="background: #FFFFFF !important; color: #000000 !important;") }}
+                                {{ form.names(class="form-control", placeholder="Например: Иван, Мария, Петр, Анна, Николай", style="background: #FFFFFF !important; color: #000000 !important; border: 2px solid #FFD700 !important;") }}
                                 {% if form.names.errors %}
                                     <div class="text-danger small mt-1">
                                         {% for error in form.names.errors %}
