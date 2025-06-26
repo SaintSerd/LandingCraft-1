@@ -4,12 +4,20 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, validators
 from wtforms.validators import DataRequired, Email, Length
+import smtplib
+from email.mime.text import MIMEText
+from dotenv import load_dotenv
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "wellness-landing-secret-key")
+app.secret_key = os.getenv("SECRET_KEY")
+
+EMAIL = os.getenv("EMAIL_USER")
+PASSWORD = os.getenv("EMAIL_PASS")
 
 class ContactForm(FlaskForm):
     phone = StringField('Номер телефона', validators=[
@@ -26,9 +34,30 @@ def index():
     form = ContactForm()
     
     if form.validate_on_submit():
-        # In a real application, you would process the form data here
-        # For example, send an email, save to database, etc.
-        flash('Спасибо за ваше обращение! Мы свяжемся с вами в ближайшее время.', 'success')
+
+        # Отримуємо дані з форми
+        phone = form.phone.data
+        names = form.names.data
+
+        # Формуємо повідомлення
+        subject = "Новая молитвенная записка с сайта"
+        body = f"Телефон: {phone}\nИмена: {names}"
+
+        msg = MIMEText(body)
+        msg['Subject'] = subject
+        msg['From'] = Email
+        msg['To'] = "maks4ssd@gmail.com"
+
+        try:
+            server = smtplib.SMTP_SSL("smtp.ukr.net", 465)
+            server.login(EMAIL, PASSWORD)
+            server.sendmail(msg['From'], [msg['To']], msg.as_string())
+            server.quit()
+            flash('Спасибо за ваше обращение! Мы свяжемся с вами в ближайшее время.', 'success')
+        except Exception as e:
+            flash(f'Ошибка при отправке письма: {str(e)}', 'danger')
+
+        
         return redirect(url_for('index'))
     
     return render_template('index.html', form=form)
