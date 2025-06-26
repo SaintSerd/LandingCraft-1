@@ -13,8 +13,8 @@ load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SESSION_SECRET", "wellness-landing-secret-key")
-app.secret_key = os.getenv("SECRET_KEY")
+
+app.secret_key = os.getenv("SECRET_KEY", "wellness-landing-secret-key")
 
 EMAIL = os.getenv("EMAIL_USER")
 PASSWORD = os.getenv("EMAIL_PASS")
